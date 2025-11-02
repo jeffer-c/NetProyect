@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NetProyect.Domain.Common;
 
-namespace NetProyect.Application.Interfaces
+namespace NetProyect.Application.Interfaces;
+
+public interface IImportService
 {
-    internal interface IImportService
-    {
-    }
+    Task<OperationResult<int>> ImportForbesAsync(CancellationToken ct);
 }

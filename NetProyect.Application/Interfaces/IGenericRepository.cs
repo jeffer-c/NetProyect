@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NetProyect.Application.Interfaces;
 
-namespace NetProyect.Application.Interfaces
+public interface IGenericRepository<T> where T : class
 {
-    internal interface IGenericRepository
-    {
-    }
+    Task<T?> GetByIdAsync(object id, CancellationToken ct);
+    Task AddAsync(T entity, CancellationToken ct);
+    Task AddRangeAsync(IEnumerable<T> entities, CancellationToken ct);
+    void Update(T entity);
+    void Remove(T entity);
+    IQueryable<T> Query();
 }

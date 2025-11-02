@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NetProyect.Application.Interfaces;
 
-namespace NetProyect.Application.Interfaces
+public interface IUnitOfWork
 {
-    internal interface IUnitOfWork
-    {
-    }
+    Task<int> SaveChangesAsync(CancellationToken ct);
 }

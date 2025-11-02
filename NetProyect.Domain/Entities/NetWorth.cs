@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NetProyect.Domain.Entities;
 
-namespace NetProyect.Domain.Entities
+public class NetWorth
 {
-    internal class NetWorth
-    {
-    }
+    public int Id { get; set; }
+    public decimal? Original { get; set; }
+    public decimal? Number { get; set; }
+    public string? Currency { get; set; }
+    public decimal? EstWorthPrev { get; set; }
+    public decimal? FinalWorth { get; set; }
+    public string? Formatted { get; set; }
 }

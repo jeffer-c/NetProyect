@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NetProyect.Application.Interfaces;
 
-namespace NetProyect.Application.Interfaces
+public interface IJsonExportService
 {
-    internal interface IJsonExportService
-    {
-    }
+    Task<string> ExportForbesToJsonAsync(CancellationToken ct); // devuelve ruta del archivo
+    Task CacheForbesJsonAsync(string json, CancellationToken ct);
 }

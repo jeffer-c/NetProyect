@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NetProyect.Domain.Entities;
 
-namespace NetProyect.Domain.Entities
+public class Industry
 {
-    internal class Industry
-    {
-    }
+    public int Id { get; set; }
+    public string Name { get; set; } = default!;
+    public ICollection<ForbesList> Forbes { get; set; } = new List<ForbesList>();
 }
